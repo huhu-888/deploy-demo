@@ -18,6 +18,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -e
             cd ~/deploy-demo
             git pull
             docker compose up -d --build
